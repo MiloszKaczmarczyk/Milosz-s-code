@@ -3,10 +3,20 @@
 	<title> Basic clicker </title>
 </head>
 <body>
+<p>Git removes the need of versioning your work by using separate files. You can have your source code 
+divided into separate branches instead. Your next task is to create a new branch under your repository and continue
+development within the new branch from now on leaving the master branch intact.</p>
 	<form method = "post" action = "/Basic.Cliker" >
 	Clicker: <button type =  "submit" name = "Clicks"  > Make a coin </button>
 	</form> 
 
+<p>
+For your file to be processed as one containing PHP code you need to change its extension to .php
+</p>
+
+                <?php
+echo 'to include PHP code in your website use php tags like so';
+?>
 	<script language = "php"?>
 	$a = 1; //the clicks count
 	$b = 0; //the copper coin count
