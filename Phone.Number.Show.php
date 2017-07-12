@@ -10,21 +10,17 @@ and open the template in the editor.
         <title> Phone Number show</title>
     </head>
     <body>
-        <form action ="#" method ="post">
+        <form action ="" method ="post">
             <input type ="number" name ="PhoneNumber" value="<?php echo $number"">
             <input type ="submit" value ="Submit">
             <input type ="reset">
         </form>
         <?php 	
         $number = "";
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $number = test_input($_POST["PhoneNumber"]);
-        echo("$number");
+        if (isset($_POST["submit"])) {
+        echo("You have entered:" . htmlspecialcahrs($_POST["PhoneNumber"]));
         
-        }else{
-	$number = $_POST["PhoneNumber"];
-	echo("$number");
-	}
+        }
      
         
         function test_input($data) {
