@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>All sorts of input</title>
+    </head>
+    <body>
+        <form>
+            <h3>Buttons</h3>
+            <h5>The Submit Button</h5>
+            <input type ="Submit" value ="Submit">
+            <h5>The Reset Button</h5>
+            <input type ="reset" value ="Reset">
+            <h5>The Radio Button</h5>
+            <input type ="radio" value ="radio1">
+            <input type ="radio" value ="radio2">
+            <input type ="radio" value ="radio3">
+            <h5>The Checkbox</h5>
+            <input type ="checkbox" value ="check1">
+            <input type ="checkbox" value ="check2">
+            <input type ="checkbox" value ="check3"> 
+            <h5>The Classic</h5>
+            <input type ="Button" value ="Click me!">
+            
+            <h3>Text based inputs</h3>
+            <h5>The Classic</h5>
+            <input type="text" name ="Text input">
+            <h5>The Password</h5>
+            <input type="password" name ="Password input">
+            <h5>The Textbox</h5>
+            <textarea name="Textbox" rows="10" cols="4"></textarea>
+            <h5>The Email</h5>
+            <input type="email" name ="Email input">
+            
+            <h3>Other types of inputs</h3>
+            <h5>The Select Menu</h5>
+            <select name="selectbox">
+                <option>Option1</option>
+                <option>Option2</option>
+                <option>Option3</option>
+                <option>Option4</option>
+                <option>Option5</option>
+            </select>
+            <h5>The Colour selection</h5>
+            <input type ="color" name ="favcolor" value ="#ff0000">
+            <h5>The Number input</h5>
+            <input type ="number" name ="number" value ="Enter a number">
+            <h5>The Range input / The slider</h5>
+            <input type="range" name ="Range" min="0" max="1000">
+            <h5>The Searchbar</h5>
+            <input type ="search" name ="Searchbar">
+            <h5>The URL input</h5>
+            Add to your Homepage:
+            <input type ="url" name ="Homepage">
+            
+            
+            
+            
+            
+        </form>
+        <?php
+        
+        ?>
+    </body>
+</html>
