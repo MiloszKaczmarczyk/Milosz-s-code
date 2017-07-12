@@ -13,11 +13,11 @@ and open the template in the editor.
         <form action ="#" method ="post">
             <input type ="number" name ="PhoneNumber" value="Enter yor phone number here">
             <input type ="submit" value ="Submit">
-            <input type ="reset"
-            
+            <input type ="reset">
+            return
         </form>
      Your phone number is <?php;
-     echo $_POST["PhoneNumber"]; ?>   
+     echo $_POST["PhoneNumber"]; ?>
         
     </body>
 </html>
