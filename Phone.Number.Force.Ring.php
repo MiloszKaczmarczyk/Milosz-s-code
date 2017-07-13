@@ -27,20 +27,14 @@ and open the template in the editor.
 	$dial = $_POST["PhoneNumber"];
 	$username = $_POST["UserName"];
 	$password = $_POST["UserPass"];
-	$cookie ="cookie.txt";
-	$postdata = "user=".$username."&password=".$password;
 	$ch = curl_init();
 	curl_setopt ($ch, CURLOPT_URL, "http://192.168.1.107/command.htm?number=$dial");
-	curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-	curl_setopt ($ch, CURLOPT_TIMEOUT, 60);
-	curl_setopt ($ch, CURLOPT_FOLLOWLOCATION, 0);
-	curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt ($ch, CURLOPT_COOKIEJAR, $cookie);
-	curl_setopt ($ch, CURLOPT_REFERER, "http://192.168.1.107/command.htm?number=$dial"); 
-	curl_setopt ($ch, CURLOPT_POSTFIELDS, $postdata);
-	curl_setopt ($ch, CURLOPT_POST, 1);
+	curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt ($ch, CURLOPT_USERPWD, "$username:$password");
+	curl_setopt ($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 	curl_error($ch);
-	curl_exec($ch);
+	$output = curl_exec($ch);
+	$info = curl_getinfo($ch);
 	curl_close($ch);
 	}else{
 	print "Please input a number";
