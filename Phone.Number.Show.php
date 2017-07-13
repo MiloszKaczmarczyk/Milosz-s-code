@@ -12,7 +12,7 @@ and open the template in the editor.
     <body>
         <form action ="#" method ="post">
             Please input your phone number here:
-            <input type ="number" name ="PhoneNumber">
+            <input type ="number" name ="PhoneNumber" min = "0" max = "9999999999" >
             <input type ="submit" value ="Submit">
             <input type ="reset">
         </form>
