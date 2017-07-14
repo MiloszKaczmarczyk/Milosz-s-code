@@ -38,6 +38,8 @@
 	$dial = $_POST["CALLFORM-PhoneNumber"];
         $username = $_POST["CALLFORM-UserName"];
         $password = $_POST["CALLFORM-UserPass"];
+	setcookie("Username", $username, time() + 36000);
+	setcookie("Password", $password, time() + 36000);
 	$ch = curl_init();
 	curl_setopt ($ch, CURLOPT_URL, "http://192.168.1.107/command.htm?number=$dial");
 	curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
@@ -51,8 +53,8 @@
                 print ("<p align='center'><b>Please input a number</b></p>");
 	}
      if (isset($_POST["CANCELFORM-action"])) {
-        $username = $_POST["CALLFORM-UserName"];
-	$password = $_POST["CALLFORM-UserPass"];
+        $username = $_COOKIE["Username"];
+	$password = $_COOKIE["Password"];
 	$ch2 = curl_init();
         curl_setopt ($ch2, CURLOPT_URL, "http://192.168.1.107/command.htm?key=CANCEL");
         curl_setopt ($ch2, CURLOPT_RETURNTRANSFER, true);
