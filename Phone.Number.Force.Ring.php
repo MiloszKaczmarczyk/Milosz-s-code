@@ -18,7 +18,7 @@
 	    <input type ="password" name ="UserPass" value ="******************"><br>
             <b>Please input phone number you want to dial here:</b><br>
             <input type ="number" name ="PhoneNumber" min = "99999999" max = "9999999999" ><br>
-            <input type ="submit" value ="Submit"><br>
+            <input type ="submit" name ="action"  value ="Submit"><br>
             <input type ="reset"></center><br>
         </form>
     <?php
@@ -41,10 +41,10 @@
 	?>
 	<form action="#" method="post">
 	<center><b>Cancel the dial</b><br>
-	<input type ="submit"  name ="CANCEL" value="Cancel"></center>
+	<input type ="submit"  name ="action" value="Cancel"></center>
 	</form>
 	<?php
-	 if (isset($_POST["CANCEL"])){
+	 if (isset($_POST["action"]) == "Cancel"){
 		$ch2 = curl_init();
 		curl_setopt ($ch2, CURLOPT_URL, "http://192.168.1.107/command.htm?key=CANCEL");
 		curl_setopt ($ch2, CURLOPT_RETURNTRANSFER, true);
@@ -54,6 +54,7 @@
 		$output2 = curl_exec($ch2);
 		$info2 = curl_getinfo($ch2);
 		curl_close($ch2);
+		print("<p align ='center'><b>Call cancelled</b></p>");
 	}
 	}else{
 	print "<p align='center'><b>Please input a number</b></p>";
