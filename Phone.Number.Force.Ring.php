@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -22,12 +23,11 @@
             <input type ="number" style="background-color: #2D6CA3" name ="CALLFORM-PhoneNumber" min = "99999999" max = "9999999999" ><br>
             <input type ="submit" class="btn btn-primary" name ="CALLFORM-action"  value ="Submit"><br>
             <input type ="reset" class="btn btn-primary" > </center><br></form>
+	    
 	<?php }else{
 		?> <form   action = "#" method ="post" name ="CANCELFORM">
 		   <center><b>Cancel the dial</b><br>
 		   <input type ="submit" class="btn btn-primary" name ="CANCELFORM-action" value ="Cancel"
-        	   $username = $_POST["CALLFORM-UserName"];
-	           $password = $_POST["CALLFORM-UserPass"];
 		   </center></form>
 	 <?php } ?>
     <?php
