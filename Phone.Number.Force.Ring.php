@@ -46,12 +46,13 @@
 	<?php
 	 if (isset($_POST["CANCEL"])){
 		$ch2 = curl_init();
-		curl_setopt ($ch2, CURLOPT_URL, "http://$username:$password@192.168.1.107/command.htm?key=CANCEL");
+		curl_setopt ($ch2, CURLOPT_URL, "http://192.168.1.107/command.htm?key=CANCEL");
 		curl_setopt ($ch2, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt ($ch2, CURLOPT_USERPWD, "$username:$password");
 		curl_setopt ($ch2, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-		$output2 = curl_exec($ch2);
 		curl_error($ch2);
+		$output2 = curl_exec($ch2);
+		$info2 = curl_getinfo($ch2);
 		curl_close($ch2);
 	}
 	}else{
