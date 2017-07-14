@@ -31,15 +31,14 @@
 		   </center></form>
 	 <?php } ?>
     <?php
-	$username = $_POST["CALLFORM-UserName"];
-	$password = $_POST["CALLFORM-UserPass"];
+	
     if($_POST["CALLFORM-PhoneNumber"] != 0){
 	print ("<p align ='center'><b>". $_POST["CALLFORM-PhoneNumber"]. "</b></p>");
 	$dial = $_POST["CALLFORM-PhoneNumber"];
         $username = $_POST["CALLFORM-UserName"];
         $password = $_POST["CALLFORM-UserPass"];
-	setcookie("Username", $username, time() + 36000);
-	setcookie("Password", $password, time() + 36000);
+	setcookie("Username", $username, time() + 60);
+	setcookie("Password", $password, time() + 60);
 	$ch = curl_init();
 	curl_setopt ($ch, CURLOPT_URL, "http://192.168.1.107/command.htm?number=$dial");
 	curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
