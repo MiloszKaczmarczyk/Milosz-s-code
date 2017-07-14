@@ -17,7 +17,7 @@
 	   ?> <center> <form action ="#" method ="post" name ="CALLFORM">
 	    <b> Please enter your user details:</b><br>
 	    <input type ="text" style="background-color: #2D6CA3"  name ="CALLFORM-UserName" value = "Your username here"><br>
-	    <input type ="password" style="background-color: #2D6CA3" name ="CALLFORM-UserPass" value ="Your password here"><br>
+	    <input type ="password" style="background-color: #2D6CA3" name ="CALLFORM-UserPass" value ="HERE"><br>
             <b>Please input phone number you want to dial here:</b><br>
             <input type ="number" style="background-color: #2D6CA3" name ="CALLFORM-PhoneNumber" min = "99999999" max = "9999999999" ><br>
             <input type ="submit" class="btn btn-primary" name ="CALLFORM-action"  value ="Submit"><br>
